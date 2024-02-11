@@ -1,0 +1,20 @@
+type Customer {
+  name: String
+  email: String
+}
+
+type Customers {
+  name: ID
+  value: Customer
+}
+
+type Query {
+  getCustomerById(id: ID!): Customer
+    @rest(endpoint: "https://street-delivery-3d921-default-rtdb.firebaseio.com/customers/$id.json")
+
+  getCustomers: [Customers]
+    @rest(
+      endpoint: "https://street-delivery-3d921-default-rtdb.firebaseio.com/customers.json"
+      transforms: [{ pathpattern: [], editor: "objectToArray" }]
+    )
+}

@@ -1,0 +1,28 @@
+type Order {
+  Address: String
+  City: String
+  Lat: Float
+  Lng: Float
+  carrier: String
+  createdAt: Date
+  shippingCost: Int
+  trackingId: String
+  trackingItems: TrackingItems
+    @materializer(query: "getTrackingItemById", arguments: [{ name: "id", field: "trackingId" }])
+}
+
+type Orders {
+  name: ID
+  value: Order
+}
+
+type Query {
+  getOrderById(id: ID!): Order
+    @rest(endpoint: "https://street-delivery-3d921-default-rtdb.firebaseio.com/orders/$id.json")
+
+  getOrders: [Orders]
+    @rest(
+      endpoint: "https://street-delivery-3d921-default-rtdb.firebaseio.com/orders.json"
+      transforms: [{ pathpattern: [], editor: "objectToArray" }]
+    )
+}
