@@ -1,4 +1,4 @@
-const BASE_URI = 'http://localhost:8081/';
+import { BASE_URI } from './Const';
 
 const assets = (img: string) => `${BASE_URI}assets/${img}`;
 
