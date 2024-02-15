@@ -21,7 +21,7 @@ const RootNavigator = () => {
       <RootStack.Group screenOptions={{ presentation: 'modal', headerShown: false }}>
         <RootStack.Screen name="MyModal" component={ModalView} />
       </RootStack.Group>
-      <RootStack.Group screenOptions={{ headerShown: false }}>
+      <RootStack.Group>
         <RootStack.Screen name="Order" component={OrderDetailsView} />
       </RootStack.Group>
     </RootStack.Navigator>

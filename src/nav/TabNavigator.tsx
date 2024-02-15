@@ -15,13 +15,13 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarActiveTintColor: 'black',
-        tabBarInactiveTintColor: 'lightgray',
+        tabBarActiveTintColor: 'blue',
+        tabBarInactiveTintColor: 'black',
         tabBarIcon: ({ focused, color, size }) => {
           if (route.name === 'Customers')
-            return <Icon name="users" type="entypo" color={focused ? 'black' : 'lightgray'} />;
+            return <Icon name="users" type="entypo" color={focused ? 'blue' : 'black'} />;
           if (route.name === 'Orders')
-            return <Icon name="box" type="entypo" color={focused ? 'black' : 'lightgray'} />;
+            return <Icon name="box" type="entypo" color={focused ? 'blue' : 'black'} />;
         },
       })}
     >

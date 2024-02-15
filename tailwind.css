@@ -26,6 +26,10 @@
   z-index: 10
 }
 
+.m-10 {
+  margin: 2.5rem
+}
+
 .m-2 {
   margin: 0.5rem
 }
@@ -35,12 +39,41 @@
   margin-bottom: 0.5rem
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem
+}
+
 .mb-1 {
   margin-bottom: 0.25rem
 }
 
 .mb-2 {
   margin-bottom: 0.5rem
+}
+
+.ml-1 {
+  margin-left: 0.25rem
 }
 
 .ml-2 {
@@ -63,12 +96,20 @@
   margin-top: 1.25rem
 }
 
-.ml-1 {
-  margin-left: 0.25rem
+.mb-5 {
+  margin-bottom: 1.25rem
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem
 }
 
 .h-64 {
   height: 16rem
+}
+
+.h-full {
+  height: 100%
 }
 
 .w-full {
@@ -113,14 +154,14 @@
   padding: 0.5rem
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem
 }
 
 .py-2 {
@@ -128,9 +169,9 @@
   padding-bottom: 0.5rem
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem
 }
 
 .pb-5 {
@@ -185,9 +226,4 @@
 
 .italic {
   font-style: italic
-}
-
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity))
 }

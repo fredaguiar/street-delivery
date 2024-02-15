@@ -36,9 +36,10 @@ const OrdersView = () => {
     <SafeAreaView style={[GlobalStyles.AndroidSafeArea, GlobalStyles.SkyBackground]}>
       <Image source={{ uri: assets('delivery.png') }} containerStyle={tw('w-full h-64')} />
 
-      <View>
+      <View style={tw('mx-4 mt-2')}>
         <Button
-          style={tw('text-center text-xl font-bold py-2 px-5')}
+          radius="lg"
+          style={tw('text-center text-xl font-bold ')}
           onPress={() => setAscending(!ascending)}
         >
           {ascending ? 'Display oldest first' : 'Display most recent first'}
