@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import React, { useLayoutEffect } from 'react';
-import CustomerView from '../CustomerView';
-import OrdersView from '../OrdersView';
+import React from 'react';
+import CustomerView from '../components/CustomerView';
+import OrdersView from '../components/OrdersView';
 import { Icon } from '@rneui/themed';
 
 export type TabStackParams = {

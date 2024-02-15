@@ -1,8 +1,7 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { TailwindProvider } from 'tailwind-rn';
 import utilities from './tailwind.json';
 import { NavigationContainer } from '@react-navigation/native';
-import RootNavigator from './src/components/nav/RootNavigator';
+import RootNavigator from './src/nav/RootNavigator';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { STEPZEN_URI } from './src/utils/Const';
 

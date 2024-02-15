@@ -9,4 +9,7 @@ export default StyleSheet.create({
   SkyBackground: {
     backgroundColor: '#DFE9ED',
   },
+  SkyBackgroundDark: {
+    backgroundColor: '#96d5ee',
+  },
 });

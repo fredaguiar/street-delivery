@@ -1,8 +1,8 @@
 type Order {
-  address: String
-  city: String
-  lat: Float
-  lng: Float
+  Address: String
+  City: String
+  Lat: Float
+  Lng: Float
   carrier: String
   createdAt: Date
   shippingCost: Int

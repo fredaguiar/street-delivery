@@ -30,5 +30,6 @@ type Order = {
   createdAt: string;
   shippingCost: number;
   trackingId: string;
+  key: string;
   trackingItems: TrackingItems;
 };
