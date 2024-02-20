@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "street-delivery",
-    "slug": "street-delivery",
+    "name": "Street Delivery",
+    "slug": "street-delivery-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ccedc83b-ae35-4c72-a758-91755699f60d"
+      }
+    },
+    "owner": "fredaguiar",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ccedc83b-ae35-4c72-a758-91755699f60d"
     }
   }
 }

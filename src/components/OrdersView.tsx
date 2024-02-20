@@ -1,4 +1,4 @@
-import { Text, SafeAreaView, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import React, { useLayoutEffect, useState } from 'react';
 import { useTailwind } from 'tailwind-rn';
 import GlobalStyles from '../utils/GlobalStyles';
@@ -33,8 +33,10 @@ const OrdersView = () => {
   }, []);
 
   return (
-    <SafeAreaView style={[GlobalStyles.AndroidSafeArea, GlobalStyles.SkyBackground]}>
-      <Image source={{ uri: assets('delivery.png') }} containerStyle={tw('w-full h-64')} />
+    <ScrollView style={[GlobalStyles.AndroidSafeArea, GlobalStyles.SkyBackground]}>
+      <View style={tw('flex-row justify-center')}>
+        <Image source={{ uri: assets('delivery.png') }} containerStyle={GlobalStyles.ImageStreet} />
+      </View>
 
       <View style={tw('mx-4 mt-2')}>
         <Button
@@ -45,15 +47,20 @@ const OrdersView = () => {
           {ascending ? 'Display oldest first' : 'Display most recent first'}
         </Button>
       </View>
+
+      {loading && <Text>Loading...</Text>}
+      {error && <Text>Error: {error.message}</Text>}
+
       {orders
-        .sort((a, b) => {
+        ?.sort((a, b) => {
           if (ascending) return new Date(a.createdAt) >= new Date(b.createdAt) ? 1 : -1;
           return new Date(a.createdAt) < new Date(b.createdAt) ? 1 : -1;
         })
         .map((item) => (
           <OrdersCard key={item.trackingId} order={item} />
         ))}
-    </SafeAreaView>
+      <View style={tw('py-10 ')}></View>
+    </ScrollView>
   );
 };
 

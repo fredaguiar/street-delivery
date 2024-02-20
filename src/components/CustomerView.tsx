@@ -1,4 +1,4 @@
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import React, { useLayoutEffect, useState } from 'react';
 import { useTailwind } from 'tailwind-rn';
 import { CompositeNavigationProp } from '@react-navigation/native';
@@ -33,7 +33,9 @@ const CustomerView = () => {
 
   return (
     <ScrollView style={[GlobalStyles.AndroidSafeArea, GlobalStyles.SkyBackground]}>
-      <Image source={{ uri: assets('delivery.png') }} containerStyle={tw('w-full h-64')} />
+      <View style={tw('flex-row justify-center')}>
+        <Image source={{ uri: assets('street1.png') }} containerStyle={GlobalStyles.ImageStreet} />
+      </View>
       <Input
         placeholder="Search customer"
         value={searchCustomer}
@@ -57,6 +59,7 @@ const CustomerView = () => {
             <CustomerCard key={ID} email={email} name={name} userId={ID} orders={customerOrders} />
           );
         })}
+      <View style={tw('py-10 ')}></View>
     </ScrollView>
   );
 };

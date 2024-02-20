@@ -12,4 +12,9 @@ export default StyleSheet.create({
   SkyBackgroundDark: {
     backgroundColor: '#96d5ee',
   },
+  ImageStreet: {
+    width: 400,
+    height: 170,
+    resizeMode: 'cover',
+  },
 });
