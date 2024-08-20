@@ -28,3 +28,11 @@ React Native, Typescript, Graphql, Tailwind, Android Studio, Stepzen, Firebase
 - expo dashboad: login to https://expo.dev
 - select the project, click on preview to view the QR code
 - Open **Expo Go** on the phone (Android/iOS), and scan the QR code
+
+## Troubleshooting
+
+HTTP Error Unauthorized / Permission denied
+
+- Go to https://console.firebase.google.com/
+- Select Realtime Database / Rules
+- Set the date to the future

@@ -42,8 +42,7 @@ const OrdersView = () => {
         <Button
           radius="lg"
           style={tw('text-center text-xl font-bold ')}
-          onPress={() => setAscending(!ascending)}
-        >
+          onPress={() => setAscending(!ascending)}>
           {ascending ? 'Display oldest first' : 'Display most recent first'}
         </Button>
       </View>

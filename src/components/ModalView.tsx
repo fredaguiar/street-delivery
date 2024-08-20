@@ -26,20 +26,21 @@ const ModalView = ({}: {}) => {
   const {
     params: { name, userId, orders },
   } = useRoute<ModelViewRouteProp>();
-
+  // ml-2 mr-2 p-2 pb-10 top-20
   return (
-    <View style={tw(' ml-2 mr-2 p-2 top-20 bg-slate-300 rounded-lg')}>
-      <TouchableOpacity style={tw('absolute right-5 top-5 z-10')} onPress={nav.goBack}>
+    <View style={tw('ml-2 mr-2 p-2 pb-20 top-10 bg-slate-300 rounded-lg')}>
+      <TouchableOpacity style={tw('absolute right-2 top-2 z-10')} onPress={nav.goBack}>
         <Icon name="closecircle" type="antdesign" size={40} />
       </TouchableOpacity>
-      <View style={tw('py-5 border-b')}>
+      <View style={tw(' border-b')}>
         <Text style={tw('text-center text-xl font-bold')}>{name}</Text>
         <Text style={tw('text-center text-sm italic')}>Deliveries</Text>
       </View>
       <FlatList
         data={orders}
         renderItem={({ item }) => <DeliveryCard order={item} />}
-        contentContainerStyle={tw('pb-5')}
+        contentContainerStyle={[tw('mb-5'), { flexGrow: 1 }]}
+        ListFooterComponent={<View style={tw('h-10')} />}
       />
     </View>
   );
